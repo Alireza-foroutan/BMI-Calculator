@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #333333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#main {
+    width: 260px;
+    min-height: 300px;
+    background: #080B1C;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+    >.title {
+        width: 100%;
+        height: fit-content;
+        padding: 30px 0px 20px 0px;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12px;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        font-family: Ubuntu;
+
+
+        >i {
+            font-size: 20px;
+            position: absolute;
+            left: 20px;
+            margin: 0;
+
+            &::before {
+                font-size: 120%;
+            }
+        }
+    }
+
+    >.wrapper {
+        width: 100%;
+        /* height: 355px; */
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        /* border: 1px solid red; */
+        padding: 0 20px;
+
+        >#screen-1 {
+            width: 100%;
+            justify-content: space-between;
+            transform: translateX(0);
+            transition: .4s;
+
+            >* {
+                background: rgba(255, 255, 255, 0.15);
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            /* ***********gender*********** */
+            >#man,
+            #woman {
+                display: none;
+
+                &:checked+label {
+                    background-color: #E81D58;
+                }
+            }
+
+            >label {
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                font-weight: bold;
+                /* border: 1px solid red; */
+                border-radius: 5px;
+                border: 2px solid transparent;
+                transition: .4s;
+                cursor: pointer;
+
+                &:hover {
+                    border-color: #E81D58;
+                }
+
+                >i {
+                    width: 100%;
+                    font-size: 50px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                >span {
+                    font-family: Ubuntu;
+                    font-size: 12px;
+                    font-weight: lighter;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                }
+            }
+
+            /* ***********gender*********** */
+            /* ***********height & name*********** */
+            >div:nth-of-type(1),
+            div:nth-of-type(2) {
+                width: 100%;
+                border-radius: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+                height: fit-content;
+                margin-block: 10px;
+
+                >span {
+                    font-family: Ubuntu;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                }
+
+                >input {
+                    width: 100%;
+                    height: 35px;
+                    border-color: transparent transparent #FFFFFF transparent;
+                    border-width: 1px;
+                    background: transparent;
+                    text-align: center;
+                    caret-color: white;
+                    font-size: 25px;
+                    font-weight: 700;
+                    color: white;
+                    margin-top: 5px;
+                    text-transform: capitalize;
+                }
+            }
+
+            /* ***********height & name*********** */
+            /* ***********weight & age*********** */
+            >#weight,
+            #age {
+                width: 100px;
+                height: 120px;
+                border-radius: 5px;
+                font-family: Ubuntu;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px;
+
+                >span {
+                    font-size: 12px;
+                }
+
+                >div {
+                    width: 100%;
+                    text-align: center;
+                    color: white;
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin-top: 10px;
+                }
+
+                >button {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    border: none;
+                    margin: 3px;
+                    background: rgba(255, 255, 255, 0.15);
+                    color: rgba(255, 255, 255, 0.7);
+                    transition: .4s;
+                    cursor: pointer;
+                    margin-top: 10px;
+
+                    &:hover {
+                        background-color: #E81D58;
+                    }
+                }
+            }
+
+            /* ***********weight & age*********** */
+        }
+
+        /* ***********screen 2*********** */
+        >#screen-2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 100%;
+            /* border: 1px solid red; */
+            justify-content: center;
+            align-content: center;
+            transition: .4s;
+
+            >h3 {
+                width: 100%;
+                color: white;
+                font-size: 30px;
+                font-family: Ubuntu;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+
+            >div {
+                width: 200px;
+                height: 250px;
+                /* border: 1px solid #E81D58; */
+                background: rgba(255, 255, 255, 0.15);
+                color: rgba(255, 255, 255, 0.7);
+                display: flex;
+                flex-wrap: wrap;
+                align-content: space-evenly;
+                justify-content: center;
+                font-family: Ubuntu;
+
+                >* {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                >h4 {
+                    font-size: 12px;
+                    text-transform: capitalize;
+                }
+
+                >div:nth-of-type(1) {
+                    font-size: 60px;
+                    color: #E81D58;
+                    font-weight: 700;
+                }
+
+                >div:nth-of-type(2) {
+                    font-size: 12px;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    >* {
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    >strong {
+                        color: white;
+                        margin-top: 3px;
+                    }
+                }
+
+                >p {
+                    font-size: 12px;
+                    text-align: center;
+                    color: white;
+                    padding: 20px;
+                }
+            }
+        }
+
+        /* ***********screen 2*********** */
+    }
+
+    >#button {
+        width: 100%;
+        background: #E81D58;
+        padding: 20px 0;
+        margin-top: 20px;
+        text-transform: uppercase;
+        color: white;
+        font-size: 12px;
+        font-family: Ubuntu;
+        letter-spacing: 1px;
+        cursor: pointer;
+        border: none;
+        transition: .4s;
+
+        &:hover {
+            background-color: white;
+            color: #E81D58;
+        }
+
+    }
+}
+#side{
+    width: 250px;
+    min-height: 400px;
+    /* border: 1px solid red; */
+    position: absolute;
+    background: #080B1C;
+    border-radius: 5px;
+    right: 0;
+    >h2{
+        font-family: Ubuntu;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: lighter;
+        margin-top: 5px;
+    }
+    >#history{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* height: 150px; */
+        /* border: 1px solid red; */
+        font-family: Ubuntu;
+        padding: 0 15px;
+        border-radius: 5px;
+        >li{
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 5px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 3px 5px;
+            margin: 10px;
+            >span{
+                width: 50%;
+                color: rgba(255, 255, 255, 0.7);
+                text-align: center;
+                text-transform: capitalize;
+                &:first-of-type{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+
+
+
+
+@font-face {
+    font-family: Ubuntu;
+    src: url(font/UbuntuSans-VariableFont_wdth\,wght.ttf);
+}

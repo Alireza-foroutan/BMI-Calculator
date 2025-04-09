@@ -1,0 +1,7 @@
+
+.icon-plus:before { content: '\e800'; } /* '' */
+.icon-minus:before { content: '\e801'; } /* '' */
+.icon-menu:before { content: '\f0c9'; } /* '' */
+.icon-history:before { content: '\f1da'; } /* '' */
+.icon-venus:before { content: '\f221'; } /* '' */
+.icon-mars:before { content: '\f222'; } /* '' */
