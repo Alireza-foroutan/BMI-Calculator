@@ -2,7 +2,7 @@
 
 ![project view](https://github.com/user-attachments/assets/9a56b0a6-4b60-4c4b-b276-eea23b87d83c)
 
-- [Demo Project](https://alireza-foroutan.github.io/spotify-clone/)
+- [Demo Project](https://alireza-foroutan.github.io/BMI-Calculator/)
 
 - Developed by Alireza Foroutan
 
